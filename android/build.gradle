@@ -25,10 +25,8 @@ apply plugin: "com.android.library"
 apply plugin: "kotlin-android"
 
 android {
-    if (project.android.hasProperty("namespace")) {
-        namespace = "com.jayesh.flutter_native_contact_picker"
-    }
-
+    
+    namespace = "com.jayesh.flutter_native_contact_picker"
     compileSdk = 34
 
     compileOptions {
@@ -45,8 +43,9 @@ android {
         test.java.srcDirs += "src/test/kotlin"
     }
 
-    defaultConfig {
-        minSdk = 21
+     defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 34
     }
 
     dependencies {
